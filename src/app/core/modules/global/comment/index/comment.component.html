@@ -5,9 +5,8 @@
           <h3 class="card-title">Comentarios</h3>
           <a class="btn btn-default" routerLink="create">Crear Comentario</a>
         </div>
-        <!-- /.card-header -->
         <div class="card-body">
-            <table datatable [dtOptions]="dtOptions" class="table table-responsive row-border hover">
+            <table style="width:100%" datatable [dtOptions]="dtOptions" class="display row-border hover">
                 <thead>
                 <tr>
                   <th *ngFor="let head of heads">{{head.name}}</th>

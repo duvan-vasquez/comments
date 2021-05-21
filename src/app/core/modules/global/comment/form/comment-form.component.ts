@@ -12,7 +12,7 @@ import { CommentService } from '../shared/services/comment.service';
 export class CommentFormComponent implements OnInit {
 
   commentForm: FormGroup = new FormGroup({
-    name: new FormControl('', [Validators.required, Validators.pattern('^[A-Za-z]+$'), Validators.maxLength(35)]),
+    name: new FormControl('', [Validators.required, Validators.pattern('^[A-Za-z ]+$'), Validators.maxLength(35)]),
     email: new FormControl('', [Validators.required, Validators.email]),
     website: new FormControl('', [Validators.pattern('(https?:\\/\\/)?((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|((\\d{1,3}\\.){3}\\d{1,3}))(\\:\\d+)?(\\/[-a-z\\d%_.~+@]*)*(\\?[;&a-z\\d%_.~+=-@]*)?(\\#[-a-z\\d_@]*)?$')]),
     content: new FormControl('', [Validators.required, Validators.maxLength(100)])
@@ -53,6 +53,7 @@ export class CommentFormComponent implements OnInit {
     };
     if(!this.isSaveData()) {
       alert("Ya existe el usuario de correo.");
+      return;
     }
     if(this.id) {
       this.commentService.putData(this.id, data).subscribe(data => {

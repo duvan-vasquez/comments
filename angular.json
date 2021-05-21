@@ -27,18 +27,14 @@
               "src/assets"
             ],
             "styles": [
-              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css",
               "src/assets/plugins/fontawesome-free/css/all.min.css",
               "src/assets/adminlte/css/adminlte.min.css",
-              "./node_modules/datatables.net-bs4/css/dataTables.bootstrap4.min.css",
               "node_modules/datatables.net-dt/css/jquery.dataTables.css"
             ],
             "scripts": [
               "src/assets/plugins/jquery/jquery.min.js",
               "src/assets/adminlte/js/adminlte.min.js",
-              "./node_modules/datatables.net/js/jquery.dataTables.js",
-              "./node_modules/datatables.net-bs4/js/dataTables.bootstrap4.min.js",
               "node_modules/jquery/dist/jquery.js",
               "node_modules/datatables.net/js/jquery.dataTables.js"
             ]

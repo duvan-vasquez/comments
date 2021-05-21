@@ -20,6 +20,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void { }
 
+  /** @TODO From connect to server.. [Comming soon] */
   onSumbit() {
     this.router.navigate(['/comment']);
   }

@@ -4,7 +4,6 @@ import { HeadTable } from 'src/app/shared/models/head-table';
 import { Subject } from 'rxjs';
 import { Router } from '@angular/router';
 import { CommentGeneral } from '../shared/models/comment-general.model';
-import { AnonymousSubject } from 'rxjs/internal/Subject';
 
 @Component({
   selector: 'app-comment-index',
