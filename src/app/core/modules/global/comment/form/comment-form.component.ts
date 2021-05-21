@@ -23,6 +23,9 @@ export class CommentFormComponent implements OnInit {
   constructor(private commentService: CommentService ,private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
+    if(this.commentService.get().length == 0) {
+      this.router.navigate(['/comment']);
+    }
     this.id = this.route.snapshot.params.id;
     if(this.id) {
       this.commentService.getById(this.id).subscribe(data => {

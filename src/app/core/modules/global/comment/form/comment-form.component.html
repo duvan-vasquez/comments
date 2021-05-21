@@ -1,60 +1,62 @@
 <div class="card card-outline card-primary">
-    <div class="card-body">
-      <p class="login-box-msg"><span *ngIf="!id">Nuevo</span> <span *ngIf="id">Edición de</span> Usuario</p>
-      <form id="login-form" #1Form="ngForm" [formGroup]="commentForm" (ngSubmit)="onSumbit()" novalidate>
-        <div class="input-group mb-3">
-          <div class="input-group-append">
-            <div class="input-group-text">
-              <span class="fas fa-user"></span>
-            </div>
+  <div class="card-body">
+    <p class="login-box-msg"><span *ngIf="!id">Nuevo</span> <span *ngIf="id">Edición de</span> Usuario</p>
+    <form id="login-form" #1Form="ngForm" [formGroup]="commentForm" (ngSubmit)="onSumbit()" novalidate>
+      <div class="input-group mb-3">
+        <div class="input-group-append">
+          <div class="input-group-text">
+            <span class="fas fa-user"></span>
           </div>
-          <input type="email" formControlName="name" class="form-control" placeholder="Nombre">
-          <p class="error-form" *ngIf="name.touched && name.invalid && name.errors?.required">Requerido</p>   
-          <p class="error-form" *ngIf="name.touched && name.invalid && name.errors?.maxlength">Solo se acepta máximo {{name.errors?.maxlength?.requiredLength}}</p>    
-          <p class="error-form" *ngIf="name.touched && name.invalid && name.errors?.pattern">Solo texto</p>    
         </div>
-        <div class="input-group mb-3">
-            <div class="input-group-append">
-              <div class="input-group-text">
-                <span class="fas fa-envelope"></span>
-              </div>
-            </div>
-            <input type="email" formControlName="email" class="form-control" placeholder="Correo Electrónico">
-            <p class="error-form" *ngIf="email.touched && email.invalid && email.errors?.email">Correo inválido</p>   
+        <input type="email" formControlName="name" class="form-control" placeholder="Nombre">
+        <p class="error-form" *ngIf="name.touched && name.invalid && name.errors?.required">Requerido</p>
+        <p class="error-form" *ngIf="name.touched && name.invalid && name.errors?.maxlength">Solo se acepta máximo
+          {{name.errors?.maxlength?.requiredLength}}</p>
+        <p class="error-form" *ngIf="name.touched && name.invalid && name.errors?.pattern">Solo texto</p>
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-append">
+          <div class="input-group-text">
+            <span class="fas fa-envelope"></span>
+          </div>
         </div>
-        <div class="input-group mb-3">
-            <div class="input-group-append">
-              <div class="input-group-text">
-                <span class="fas fa-search"></span>
-              </div>
-            </div>
-            <input type="text" formControlName="website" class="form-control" placeholder="Página Web"> 
-            <p class="error-form" *ngIf="website.touched && name.invalid && website.errors?.pattern">Url Inválio</p>    
-          
+        <input type="email" formControlName="email" class="form-control" placeholder="Correo Electrónico">
+        <p class="error-form" *ngIf="email.touched && email.invalid && email.errors?.email">Correo inválido</p>
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-append">
+          <div class="input-group-text">
+            <span class="fas fa-search"></span>
+          </div>
         </div>
-        <div class="input-group mb-3">
-            <div class="input-group-append">
-              <div class="input-group-text">
-                <span class="fas fa-edit"></span>
-              </div>
-            </div>
-            <textarea formControlName="content" class="form-control" placeholder="Comentarios" rows="5"></textarea>
-            <p class="error-form" *ngIf="content.touched && content.invalid && content.errors?.required">Requerido</p>   
-                <p class="error-form" *ngIf="name.touched && name.invalid && name.errors?.maxlength">Solo se acepta máximo {{name.errors?.maxlength?.requiredLength}}</p>    
-          
+        <input type="text" formControlName="website" class="form-control" placeholder="Página Web">
+        <p class="error-form" *ngIf="website.touched && name.invalid && website.errors?.pattern">Url Inválio</p>
+
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-append">
+          <div class="input-group-text">
+            <span class="fas fa-edit"></span>
+          </div>
         </div>
-        <div class="row">
-          <!-- /.col -->
-             <!-- /.col -->
-            <div class="col-6">
-                <button routerLink="/comment" class="btn btn-default btn-block">Cancelar</button>
-            </div>
-            <div class="col-6">
-                <button type="submit" [disabled]="commentForm.invalid" class="btn btn-success btn-block">Guardar</button>
-            </div>
-          <!-- /.col -->
+        <textarea formControlName="content" class="form-control" placeholder="Comentarios" rows="5"></textarea>
+        <p class="error-form" *ngIf="content.touched && content.invalid && content.errors?.required">Requerido</p>
+        <p class="error-form" *ngIf="name.touched && name.invalid && name.errors?.maxlength">Solo se acepta máximo
+          {{name.errors?.maxlength?.requiredLength}}</p>
+
+      </div>
+      <div class="row">
+        <!-- /.col -->
+        <!-- /.col -->
+        <div class="col-6">
+          <button routerLink="/comment" class="btn btn-default btn-block">Cancelar</button>
         </div>
-      </form>
-    </div>
-    <!-- /.card-body -->
+        <div class="col-6">
+          <button type="submit" [disabled]="commentForm.invalid" class="btn btn-success btn-block">Guardar</button>
+        </div>
+        <!-- /.col -->
+      </div>
+    </form>
+  </div>
+  <!-- /.card-body -->
 </div>
